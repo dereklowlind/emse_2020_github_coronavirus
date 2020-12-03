@@ -3,7 +3,7 @@ import json
 
 val = input('Enter the number of the file: ')
  
-f = open(val + '_pulls.json',) 
+f = open(val + '_pulls.json',encoding='utf-8',errors='ignore') 
 
 data = json.load(f) 
 
