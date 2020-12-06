@@ -5,7 +5,7 @@ import datetime
 def metrics(year_start, month_start, year_end, month_end, commit_history):
     start = datetime.datetime(year_start, month_start, 1, tzinfo=datetime.timezone.utc)
     end = datetime.datetime(year_end + (month_end == 12), 
-              (month_end + 1 if month_end < 12 else 1), 1,  tzinfo=datetime.timezone.utc) - datetime.timedelta(days=1) # making end date include all dates in end month
+              (month_end + 1 if month_end < 12 else 1), 1,  tzinfo=datetime.timezone.utc)# making end date include all dates in end month
     timeframe = []
     previous_history = []
     # print("start= ", start)
