@@ -29,7 +29,7 @@ N_of_active_devs = -1
 N_of_new_devs = -1
 N_of_commits = -1
 
-commit_history_file = open("committed_all_time.csv")
+commit_history_file = open("committed_all_time.csv",encoding='utf-8',errors='ignore')
 commit_history = list(csv.reader(commit_history_file))
 # commit_history = commit_history[0:10] # test on smaller range
 # convert the timestamp string into a datetime and append it to the end of the list
@@ -47,7 +47,7 @@ tw3 = 0  # 2019-07 - 2019-12
 tw4 = 0  # 2020-01 - 2020-03
 tw5 = 0  # 2020-04 - 2020-05
 tw6 = 0  # 2020-01 - 2020-05
-tw7 = 0  # 2020-01 - 2020-11
+tw7 = 0  # 2020-06 - 2020-11
 tw8 = 0  # 2019-01 - 2019-11
 tw9 = 0  # 2020-01 - 2020-11
 
@@ -57,7 +57,7 @@ print(metrics(2019, 7, 2019, 12, commit_history))
 print(metrics(2020, 1, 2020, 3, commit_history))
 print(metrics(2020, 4, 2020, 5, commit_history))
 print(metrics(2020, 1, 2020, 5, commit_history))
-print(metrics(2020, 1, 2020, 11, commit_history))
+print(metrics(2020, 6, 2020, 11, commit_history))
 print(metrics(2019, 1, 2019, 11, commit_history))
 print(metrics(2020, 1, 2020, 11, commit_history))
 
